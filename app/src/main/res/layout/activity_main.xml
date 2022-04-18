@@ -56,12 +56,12 @@
     <TextView
         android:id="@+id/connectTo"
         android:layout_height="wrap_content"
-        android:text="Connected to"
+        android:text="-"
         android:gravity="center"
         android:layout_width="match_parent"
         android:textSize="20sp"
         android:layout_marginBottom="10dp"
-        android:textColor="#0969da" />
+        android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/sendEditext"
@@ -89,10 +89,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textColor="@color/black"
-        android:text="No message"
         android:hint="Receive message"
         android:fontFamily="sans-serif-medium"
-        android:gravity="start"
+        android:gravity="center"
         android:layout_weight="1"
         android:textSize="18sp"
         android:background="@drawable/input_1"

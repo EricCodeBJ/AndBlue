@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         andBlue.setOnReceiveMessage(new onReceiveMessage() {
             @Override
             public void receivedMessage(String message) {
-                //Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
                 textView_readEditext.setText(message);
             }
         });
@@ -54,13 +53,14 @@ public class MainActivity extends AppCompatActivity {
             andBlue.sendMessage(editext_sendEditext.getText().toString());
         });
 
-        /* andBlue.setOnDevicePickerListener(new onDevicePickerListener() {
+
+        andBlue.setOnDevicePickerListener(new onDevicePickerListener() {
             @Override
             public void onDevicePick(BluetoothDevice device) {
                 andBlue.connectDevice(device);
                 textView_connectTo.setText(device.getName());
             }
-        });*/
+        });
 
         btn_pickDevice.setOnClickListener(v -> {
             if ( andBlue.isBTEneable) {
