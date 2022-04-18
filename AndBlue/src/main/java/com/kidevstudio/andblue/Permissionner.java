@@ -34,7 +34,7 @@ public class Permissionner {
         this.mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
     }
 
-    protected void setisBTEneable(boolean statut) {
+    public void setisBTEneable(boolean statut) {
         this.isBTEneable = statut;
     }
 
@@ -42,7 +42,7 @@ public class Permissionner {
         this.activity = activity;
     }
 
-    protected void requestPermission () {
+    public void requestPermission () {
         if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.BLUETOOTH_CONNECT) == PackageManager.PERMISSION_DENIED) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.BLUETOOTH_CONNECT}, 2);
@@ -67,7 +67,7 @@ public class Permissionner {
          return isBTEneable;
      }
 
-    protected void startBlueTooth() {
+    public void startBlueTooth() {
         if (isDeviceHaveBT) {
             if (this.mBluetoothAdapter != null && !this.mBluetoothAdapter.isEnabled()) {
                 Intent enableBT = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
