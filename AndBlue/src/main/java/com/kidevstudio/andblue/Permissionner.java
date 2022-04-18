@@ -16,7 +16,7 @@ public class Permissionner {
     protected final String TAG = "AndBlue Log";
     protected Activity activity;
     protected BluetoothAdapter mBluetoothAdapter = null;
-    protected static final int REQUEST_ENABLE_BT = 2;
+    public static final int REQUEST_ENABLE_BT = 2;
     protected boolean isDeviceHaveBT = false, isBTEneable = false;
 
      // Getter
