@@ -35,8 +35,8 @@ AndBlue
 
 A fast Android library to easily manage interactions with a bluetooth module.
 
-> image
-> image
+![AndBlue](https://raw.github.com/EricCodeBJ/AndBlue/master/app/src/main/res/drawable/Screenshot_20220418-102156.png)
+![AndBlue](https://raw.github.com/EricCodeBJ/AndBlue/master/app/src/main/res/drawable/Screenshot_20220417-210959.png)
 
 It uses a BitmapShader and **does not**:
 * create a copy of the original bitmap
