@@ -196,28 +196,30 @@ public class AndBlue extends Permissionner {
         switch (msg.what) {
             case Constantes.MESSAGE_READ:
                 byte[] readuf = (byte[]) msg.obj;
-                this.mReceiveMessage.receivedMessage(new String(readuf, 0, msg.arg1));
+                if (this.mReceiveMessage != null) {
+                    this.mReceiveMessage.receivedMessage(new String(readuf, 0, msg.arg1));
+                }
             break;
             case Constantes.MESSAGE_DEVICE_NAME:
-                this.mStateListener.onConnected();
+                if (this.mStateListener != null) { this.mStateListener.onConnected(); }
                 BT_CONNECT = true;
             break;
             case Constantes.MESSAGE_STATE_CHANGE :
                 if (BluetoothEchange.State != BluetoothEchange.STATE_CONNECTED) {
                     if (BluetoothEchange.State == BluetoothEchange.STATE_CONNECTING) {
-                        this.mStateListener.onConnecting();
+                        if (this.mStateListener != null) {this.mStateListener.onConnecting();}
                     } else if (BluetoothEchange.State == BluetoothEchange.STATE_LISTEN) {
                         if (BluetoothEchange.STATE == BluetoothEchange.STATE_LOST){
-                            this.mStateListener.onLost();
+                            if (this.mStateListener != null) {this.mStateListener.onLost();}
                             BT_CONNECT = false;
                         } else if(BluetoothEchange.STATE == BluetoothEchange.STATE_FAIL){
-                            this.mStateListener.onFailed();
+                            if (this.mStateListener != null) {this.mStateListener.onFailed();}
                             BT_CONNECT = false;
                             mDevice = null;
                         } else if(BluetoothEchange.STATE == BluetoothEchange.STATE_NONE) {
                             BT_CONNECT = false;
                             mDevice = null;
-                            this.mStateListener.onNone();
+                            if (this.mStateListener != null) {this.mStateListener.onNone();}
                         }
                     }
                 } else {
