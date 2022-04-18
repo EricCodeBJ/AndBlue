@@ -14,9 +14,9 @@ import androidx.core.content.ContextCompat;
 public class Permissionner {
 
     protected final String TAG = "AndBlue Log";
-    private Activity activity;
-    private BluetoothAdapter mBluetoothAdapter = null;
-    public static final int REQUEST_ENABLE_BT = 2;
+    protected Activity activity;
+    protected BluetoothAdapter mBluetoothAdapter = null;
+    protected static final int REQUEST_ENABLE_BT = 2;
     protected boolean isDeviceHaveBT = false, isBTEneable = false;
 
      // Getter

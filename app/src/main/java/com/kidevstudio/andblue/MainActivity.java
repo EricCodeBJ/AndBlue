@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import android.app.Activity;
+import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
 import android.graphics.Color;
@@ -32,9 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-
-
         andBlue = new AndBlue(MainActivity.this);
+
 
         textView_connectTo = findViewById(R.id.connectTo);
         textView_readEditext = findViewById(R.id.readEditext);
@@ -54,13 +54,13 @@ public class MainActivity extends AppCompatActivity {
             andBlue.sendMessage(editext_sendEditext.getText().toString());
         });
 
-        andBlue.setOnDevicePickerListener(new onDevicePickerListener() {
+        /* andBlue.setOnDevicePickerListener(new onDevicePickerListener() {
             @Override
             public void onDevicePick(BluetoothDevice device) {
                 andBlue.connectDevice(device);
                 textView_connectTo.setText(device.getName());
             }
-        });
+        });*/
 
         btn_pickDevice.setOnClickListener(v -> {
             if ( andBlue.isBTEneable) {

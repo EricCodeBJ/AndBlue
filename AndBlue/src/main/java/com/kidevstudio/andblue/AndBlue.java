@@ -48,8 +48,8 @@ public class AndBlue extends Permissionner {
     private ListAdapter listeDejaUtilise;
     private ListView listBluetooth;
     private TextView view_not_found;
-    List<HashMap<String, String>> data = new ArrayList<>();
-    HashMap<String, String> affichage;
+    private List<HashMap<String, String>> data = new ArrayList<>();
+    private HashMap<String, String> affichage;
 
     // Customisation
     private String backgroundColor = "#FFFFFF";
@@ -169,7 +169,9 @@ public class AndBlue extends Permissionner {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                     setCurrentDevice( arrayListPairedDevice.get(Integer.parseInt(data.get(i).get("position"))) );
-                    pickerListener.onDevicePick(arrayListPairedDevice.get(Integer.parseInt(data.get(i).get("position"))));
+                    if ( pickerListener != null ) {
+                        pickerListener.onDevicePick(arrayListPairedDevice.get(Integer.parseInt(data.get(i).get("position"))));
+                    }
                     if ( dialog != null ) {
                         dialog.dismiss();
                         dialog = null;
@@ -190,7 +192,7 @@ public class AndBlue extends Permissionner {
 
     public void setStateListener(BleutoothStateListener bt){ this.mStateListener = bt;};
 
-    public void stater(Message msg) {
+    private void stater(Message msg) {
         switch (msg.what) {
             case Constantes.MESSAGE_READ:
                 byte[] readuf = (byte[]) msg.obj;
@@ -233,7 +235,7 @@ public class AndBlue extends Permissionner {
     }
 
     @SuppressLint("HandlerLeak")
-    Handler mHandler = new Handler(){
+    private Handler mHandler = new Handler(){
         @Override
         public void handleMessage(@NonNull Message msg) {
             super.handleMessage(msg);
