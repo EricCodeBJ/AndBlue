@@ -45,7 +45,7 @@ allprojects {
 
 ```
 dependencies {
-    implementation 'com.github.EricCodeBJ:AndBlue:v1'
+    implementation 'com.github.EricCodeBJ:AndBlue:v1.0'
 }
 ```
 
