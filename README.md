@@ -53,10 +53,14 @@ Usage
 -----
 ```java
 
+public class MainActivity extends AppCompatActivity {
+
+    AndBlue andBlue;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
       ...
-      AndBlue andBlue = new AndBlue(MainActivity.this);
+      andBlue = new AndBlue(MainActivity.this);
       
       // Start Bluetooth
       andBlue.startBlueTooth();
@@ -81,12 +85,14 @@ Usage
     
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         ...
         if (resultCode == Activity.RESULT_OK && requestCode == AndBlue.REQUEST_ENABLE_BT ) {
             andBlue.setisBTEneable(true);
             andBlue.showDevicePicker();
         }
     }
+}
 ```
 
 All Methods
