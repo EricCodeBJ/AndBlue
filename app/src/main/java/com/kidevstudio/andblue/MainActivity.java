@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
+
+
         andBlue = new AndBlue(MainActivity.this);
 
         textView_connectTo = findViewById(R.id.connectTo);
