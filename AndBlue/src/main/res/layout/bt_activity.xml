@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+
+    <!-- RecyclerView Bloc -->
+    <ListView
+        android:id="@+id/listBluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:smoothScrollbar="true"
+        android:paddingBottom="150dp"
+        android:visibility="gone"
+        android:overScrollMode="never" />
+
+    <!-- No View -->
+    <TextView
+        android:id="@+id/view_not_found"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/aucun_peripherique"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:alpha=".5"
+        android:textColor="@color/black" />
+
+</LinearLayout>

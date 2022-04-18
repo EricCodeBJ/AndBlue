@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="12dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/actionBar_back"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:alpha=".6"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="15dp"
+            android:contentDescription="@string/bluetooth"
+            android:src="@drawable/ic_round_bluetooth_connected_24" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingEnd="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/item_title"
+                android:layout_height="wrap_content"
+                android:text="@string/bluetooth"
+                android:maxLines="1"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:layout_width="match_parent"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/item_description"
+                android:layout_height="wrap_content"
+                android:text="@string/bluetooth"
+                android:maxLines="1"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:alpha=".5"
+                android:layout_width="match_parent"
+                android:textSize="14sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/actionBar_refresh"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:alpha=".4"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="10dp"
+            android:contentDescription="@string/bluetooth"
+            android:src="@drawable/ic_round_link_24" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha=".005"
+        android:background="@color/black"/>
+
+</LinearLayout>

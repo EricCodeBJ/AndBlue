@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/CEDRIC/AndroidStudioProjects/AndBlue/AndBlue/src/main/res/drawable/ic_baseline_keyboard_backspace_24.xml" value="0.176" />
+        <entry key="..\:/Users/CEDRIC/AndroidStudioProjects/AndBlue/AndBlue/src/main/res/drawable/ic_baseline_refresh_24.xml" value="0.176" />
+        <entry key="..\:/Users/CEDRIC/AndroidStudioProjects/AndBlue/AndBlue/src/main/res/drawable/ic_round_bluetooth_connected_24.xml" value="0.176" />
+        <entry key="..\:/Users/CEDRIC/AndroidStudioProjects/AndBlue/AndBlue/src/main/res/drawable/ic_round_desktop_windows_24.xml" value="0.1955" />
+        <entry key="..\:/Users/CEDRIC/AndroidStudioProjects/AndBlue/AndBlue/src/main/res/drawable/ic_round_link_24.xml" value="0.176" />
+        <entry key="..\:/Users/CEDRIC/AndroidStudioProjects/AndBlue/AndBlue/src/main/res/layout/activity_permission.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/CEDRIC/AndroidStudioProjects/AndBlue/AndBlue/src/main/res/layout/bt_activity.xml" value="0.25" />
+        <entry key="..\:/Users/CEDRIC/AndroidStudioProjects/AndBlue/AndBlue/src/main/res/layout/item_bt_device.xml" value="0.33" />
+        <entry key="..\:/Users/CEDRIC/AndroidStudioProjects/AndBlue/AndBlue/src/main/res/layout/item_bt_device2.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/CEDRIC/AndroidStudioProjects/AndBlue/app/src/main/res/drawable/input_1.xml" value="0.1795" />
+        <entry key="..\:/Users/CEDRIC/AndroidStudioProjects/AndBlue/app/src/main/res/drawable/input_2.xml" value="0.1795" />
+        <entry key="..\:/Users/CEDRIC/AndroidStudioProjects/AndBlue/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/CEDRIC/AndroidStudioProjects/AndBlue/app/src/main/res/layout/item_bt_device2.xml" value="0.24166666666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

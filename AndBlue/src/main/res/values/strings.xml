@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="select_bluetooth">Sélectionner</string>
+    <string name="recherche">Recherche en cours</string>
+    <string name="peripherique_connecte">Périphériques connectés</string>
+    <string name="aucun_peripherique">Auun périphérique</string>
+</resources>
