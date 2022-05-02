@@ -45,7 +45,7 @@ allprojects {
 
 ```
 dependencies {
-  implementation 'com.github.EricCodeBJ:AndBlue:v1.0.0'
+  implementation 'com.github.EricCodeBJ:AndBlue:v1.0.1'
 }
 ```
 
@@ -123,8 +123,8 @@ Advanced
 
 **Customisation** 
 ```
-   // Set background  of the bluetooth device picker page
-   andBlue.setBackgroundColor("#1cde34");
+  // Set background  of the bluetooth device picker page
+  andBlue.setBackgroundColor("#1cde34");
 
   // Set custom List item layout
   andBlue.setCustomItemLayout(R.layout.item_bt_device, new int[] {R.id.textview_title, R.id.textview_description});
