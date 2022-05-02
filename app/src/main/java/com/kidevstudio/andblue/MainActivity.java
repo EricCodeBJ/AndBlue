@@ -10,6 +10,7 @@ import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         andBlue.setOnReceiveMessage(new onReceiveMessage() {
             @Override
             public void receivedMessage(String message) {
+                Log.e("message recu", message);
                 textView_readEditext.setText(message);
             }
         });

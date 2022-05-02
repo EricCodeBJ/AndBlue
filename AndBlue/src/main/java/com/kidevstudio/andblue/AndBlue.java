@@ -50,6 +50,7 @@ public class AndBlue extends Permissionner {
     private TextView view_not_found;
     private List<HashMap<String, String>> data = new ArrayList<>();
     private HashMap<String, String> affichage;
+    private StringBuffer mStringBuffer;
 
     // Customisation
     private String backgroundColor = "#FFFFFF";
@@ -231,13 +232,14 @@ public class AndBlue extends Permissionner {
     }
 
     public void connectDevice(BluetoothDevice device) {
-        mDevice = getmBluetoothAdapter().getRemoteDevice(device.getAddress());
+        mDevice = BluetoothAdapter.getDefaultAdapter().getRemoteDevice(device.getAddress());
         BTEchange = new BluetoothEchange(getActivity(),mHandler);
+        mStringBuffer = new StringBuffer("");
         BTEchange.connect(mDevice);
     }
 
     @SuppressLint("HandlerLeak")
-    private Handler mHandler = new Handler(){
+    private final Handler mHandler = new Handler(){
         @Override
         public void handleMessage(@NonNull Message msg) {
             super.handleMessage(msg);

@@ -172,15 +172,14 @@ public class BluetoothEchange {
         mHandler.sendMessage(msg);
     }
 
-    //
-
     private class AcceptThreadLampe extends Thread{
         private final BluetoothServerSocket mmServerSocket;
         //
         public AcceptThreadLampe(){
             BluetoothServerSocket tmp = null;
             try{
-                tmp = mAdapter.listenUsingRfcommWithServiceRecord(NAME,MY_UUID);
+                UUID MY_UUIDs = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"); //00001101-0000-1000-8000-00805F9B34FB
+                tmp = mAdapter.listenUsingRfcommWithServiceRecord(NAME,MY_UUIDs);
             }
             catch (IOException e){
             }
@@ -243,7 +242,6 @@ public class BluetoothEchange {
                 Log.e("MyHome","Name : "+device.getName()+" Adresse : "+device.getAddress());
             }
             catch (IOException e){
-
             }
             mmSocket = tmp;
         }
@@ -260,10 +258,12 @@ public class BluetoothEchange {
             }
             catch (IOException e){
                 connectionFailed();
+                Log.e("pourquoi erreur 2", e.getMessage().toString());
                 try {
                     mmSocket.close();
                 }
                 catch (IOException e2){
+                    Log.e("pourquoi erreur 3", e2.getMessage().toString());
                 }
                 BluetoothEchange.this.start();
                 return;
